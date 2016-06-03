@@ -1,0 +1,40 @@
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Intel Security Group</h1>
+    <p class="lead"></p>
+    <img src="/assets/images/McAfee.png" alt="Intel Security Group">
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+
+    </div>
+  </div>
+
+  <form actions="/" class="thing-form" method="post">
+    <label>Submit malware data into our database.</label>
+    <p class="input-group">
+      <input type="file" class="form-control" file-model="csv-file" placeholder="Upload Data Here">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" value="Upload" ng-click="$ctrl.submit()">Upload</button>
+      </span>
+    </p>
+
+<!--   <form actions="/" method="post">
+    <label>Submit malware data into our database.</label>
+    <p class="input-group">
+      <input type="file" class="form-control" id="myfile" placeholder="Upload Data Here">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" value="Upload" ng-click="$ctrl.submit()">Upload</button>
+      </span>
+    </p> -->
+<!--     <p class="input-group">
+      <h3 class="h3">File Uploads:</h3>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
+        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="$ctrl.deleteThing(thing)">&times;</button></a></li>
+      </ul>
+    </p> -->
+  </form>
+</div>
