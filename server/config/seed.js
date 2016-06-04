@@ -4,8 +4,8 @@
  */
 
 'use strict';
-// import sqldb from '../sqldb';
-// var Thing = sqldb.Thing;
+import sqldb from '../sqldb';
+var csv = sqldb.csv;
 // var User = sqldb.User;
 
 // Thing.sync()

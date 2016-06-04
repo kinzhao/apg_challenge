@@ -1,15 +1,15 @@
 /**
- * User model events
+ * Csv model events
  */
 
 'use strict';
 
 import {EventEmitter} from 'events';
-import {User} from '../../sqldb';
-var UserEvents = new EventEmitter();
+var Csv = require('../../sqldb').Csv;
+var CsvEvents = new EventEmitter();
 
 // Set max event listeners (0 == unlimited)
-UserEvents.setMaxListeners(0);
+CsvEvents.setMaxListeners(0);
 
 // Model events
 var events = {
@@ -21,15 +21,15 @@ var events = {
 // Register the event emitter to the model events
 for (var e in events) {
   var event = events[e];
-  User.hook(e, emitEvent(event));
+  Csv.hook(e, emitEvent(event));
 }
 
 function emitEvent(event) {
   return function(doc, options, done) {
-    UserEvents.emit(event + ':' + doc._id, doc);
-    UserEvents.emit(event, doc);
+    CsvEvents.emit(event + ':' + doc._MD5, doc);
+    CsvEvents.emit(event, doc);
     done(null);
   }
 }
 
-export default UserEvents;
+export default CsvEvents;

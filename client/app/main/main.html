@@ -13,12 +13,20 @@
     </div>
   </div>
 
-  <form actions="/" class="thing-form" method="post">
-    <label>Submit malware data into our database.</label>
+  <form id="uploadForm" name="uploadForm">
+    <label id="submission_info">Submit malware data into our database.</label>
     <p class="input-group">
-      <input type="file" class="form-control" file-model="csv-file" placeholder="Upload Data Here">
+      <input type="file" 
+             class="form-control" 
+             placeholder="Upload Data Here" 
+             id="uploadInput" 
+             name="myFiles">
+        <!-- selected files: <span id="fileNum">0</span>; total size: <span id="fileSize">0</span></p> -->
       <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" value="Upload" ng-click="$ctrl.submit()">Upload</button>
+        <button type="submit" 
+                class="btn btn-primary" 
+                value="Send file" 
+                ng-click="$ctrl.submit()">Upload</button>
       </span>
     </p>
 
